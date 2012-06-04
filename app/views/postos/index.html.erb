@@ -1,0 +1,36 @@
+<div id="posto">
+<h1>Relatório de Postos de Saúde</h1>
+
+<table id="relatorio">
+  <tr>
+    <th>Nome</th>
+    <th>Endereço</th>
+    <th>Complemento</th>
+    <th>Bairro</th>
+    <th>Cep</th>
+    <th>Cidade</th>
+    <th>Telefone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @postos.each do |posto| %>
+  <tr>
+    <td><%= posto.nome %></td>
+    <td><%= posto.endereco %></td>
+    <td><%= posto.complemento %></td>
+    <td><%= posto.bairro %></td>
+    <td><%= posto.cep %></td>
+    <td><%= posto.cidade %></td>
+    <td><%= posto.telefone %></td>
+    <td><%= link_to 'Ver', posto %></td>
+    <td><%= link_to 'Alterar', edit_posto_path(posto) %></td>
+    <td><%= link_to 'Apagar', posto, confirm: 'Realmente deseja apagar?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+</div>

@@ -1,0 +1,14 @@
+<div id="arearestrita">
+    <div class="formularioarearestrita">
+
+      <%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <%= f.input :email, label: 'E-mail' %>
+        <%= f.input :password, label: 'Senha' %>
+        <div><%= f.submit "Entrar" %></div>
+      <% end %>
+    </div>
+
+    <div class="formulariolinks">
+      <%= render "links" %>
+    </div>
+</div>

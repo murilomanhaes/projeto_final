@@ -1,0 +1,35 @@
+<div id="funcionario">
+
+<h1>Funcionários Cadastrados</h1>
+
+
+<table id="relatorio">
+  <tr>
+    <th>Nome</th>
+    <th>Rg</th>
+    <th>Email</th>
+    <th>Telefone</th>
+    <th>Endereco</th>
+    <th>Posto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @funcionarios.each do |funcionario| %>
+  <tr>
+    <td><%= funcionario.nome %></td>
+    <td><%= funcionario.rg %></td>
+    <td><%= funcionario.email %></td>
+    <td><%= funcionario.telefone %></td>
+    <td><%= funcionario.endereco %></td>
+    <td><%= funcionario.posto.nome %></td>
+    <td><%= link_to 'Ver', funcionario %></td>
+    <td><%= link_to 'Alterar', edit_funcionario_path(funcionario) %></td>
+    <td><%= link_to 'Apagar', funcionario, confirm: 'Realmente deseja apagar?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+</br>
+
+</div>

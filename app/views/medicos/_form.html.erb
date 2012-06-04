@@ -1,0 +1,62 @@
+<div id="formulario">
+
+  <%= semantic_form_for(@medico) do |f| %>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Pessoais</legend>
+
+        <br>
+
+           <%= f.input :nome %>
+
+           <%= f.input :crm, label: "CRM"%>
+
+           <%= f.input :data_nascimento, as: :string, label: "Data Nascimento",
+          input_html: opcoes_para_data %>
+
+           <%= f.input :sexo, as: :select, collection: ["Masculino", "Feminino"]%>
+
+           <%= f.input :estado_civil, as: :select, collection: ["Solteiro", "Casado", "Separado", "Viúvo"] %>
+
+           <%= f.input :naturalidade %>
+
+           <%= f.input :grau_instrucao, label: "Grau Instrução"%>
+      </fieldset>
+
+      <br><br>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Contato</legend>
+
+        <br>
+
+           <%= f.input :telefone, input_html: opcoes_para_telefone %>
+
+           <%= f.input :endereco, label: "Endereço"%>
+
+           <%= f.input :complemento %>
+
+           <%= f.input :bairro %>
+
+           <%= f.input :cep, label: "CEP", input_html: opcoes_para_cep %>
+
+           <%= f.input :cidade %>
+      </fieldset>
+
+      <br><br>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Posto</legend>
+      <br>
+
+   		<%= f.input :posto, member_label: :nome, include_blank: true%>
+
+   	</fieldset>
+
+
+      <br><br>
+
+      <%= f.submit 'Salvar' %>
+<% end %>
+
+</div>

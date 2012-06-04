@@ -1,0 +1,23 @@
+<div id="formulario">
+
+<%= semantic_form_for(@posto) do |f| %>
+
+  <fieldset class="dados_fieldset">
+    <legend> Dados Posto</legend>
+    <br>
+
+      <%= f.input :nome %>
+      <%= f.input :endereco, label: "Endereço"%>
+      <%= f.input :complemento %>
+      <%= f.input :bairro %>
+      <%= f.input :cep, label: "CEP", input_html: opcoes_para_cep%>
+      <%= f.input :cidade %>
+      <%= f.input :telefone, input_html: opcoes_para_telefone %>
+  </fieldset>
+
+  <br><br>
+
+  <%= f.submit 'Salvar' %>
+<% end %>
+
+</div>

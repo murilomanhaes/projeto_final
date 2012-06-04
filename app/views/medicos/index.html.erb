@@ -1,0 +1,35 @@
+<div id="medico">
+
+<h1>Médicos Cadastrados</h1>
+
+<table id="relatorio">
+  <tr>
+    <th>Nome</th>
+    <th>Crm</th>
+    <th>Grau instrucao</th>
+    <th>Telefone</th>
+    <th>Cidade</th>
+    <th>Posto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @medicos.each do |medico| %>
+  <tr>
+    <td><%= medico.nome %></td>
+    <td><%= medico.crm %></td>
+    <td><%= medico.grau_instrucao %></td>
+    <td><%= medico.telefone %></td>
+    <td><%= medico.cidade %></td>
+    <td><%= medico.posto.nome %></td>
+    <td><%= link_to 'Ver', medico %></td>
+    <td><%= link_to 'Alterar', edit_medico_path(medico) %></td>
+    <td><%= link_to 'Apagar', medico, confirm: 'Realmente deseja apagar?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+</div>
