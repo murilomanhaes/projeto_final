@@ -52,8 +52,22 @@
 					    </ul>
 				  </li>
 
-		      <li><%= link_to 'Funcionário', informacoes_funcionarios_path %></li>
-		      <li><%= link_to 'U.M.S', informacoes_postos_path %></li>
+		      <li><%= link_to 'Funcionário', informacoes_funcionarios_path %>
+		          <ul class="submenu">
+					         <li><%= link_to 'Cadastrar', new_funcionario_path %></li>
+					         <li><a href="#">Consultar</a></li>
+					         <li><%= link_to 'Relatório', funcionarios_path %></li>
+					    </ul>
+				  </li>
+
+		      <li><%= link_to 'U.M.S', informacoes_postos_path %>
+		          <ul class="submenu">
+					         <li><%= link_to 'Cadastrar', new_posto_path %></li>
+					         <li><a href="#">Consultar</a></li>
+					         <li><%= link_to 'Relatório', postos_path %></li>
+					    </ul>
+				  </li>
+
 		      <li><a href="#">Exames</a></li>
 		      <li><a href="#">Consulta Mé.</a></li>
 		      <li><a href="#">Suporte Online</a></li>
@@ -65,6 +79,22 @@
 
       <div id="conteudogeral">
         <div id="conteudo">
+
+          <% if notice %>
+-            <div id='notice'>
+                <h1>Aviso</h1>
+                <p><%= notice %></p>
+             </div>
+          <% end %>
+
+          <% if alert %>
+             <div id='alert'>
+               <h1>Erro</h1>
+               <p><%= alert %></p>
+             </div>
+          <% end %>
+
+
 
           <%= yield %>
 
