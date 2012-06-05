@@ -1,32 +1,3 @@
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
-
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px; }
-
-a {
-  color: #000;
-  &:visited {
-    color: #666; }
-  &:hover {
-    color: #fff;
-    background-color: #000; } }
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px; } }
-
 #notice {
   color: green; }
 
@@ -54,3 +25,438 @@ div {
   ul li {
     font-size: 12px;
     list-style: square; } }
+
+
+
+
+
+
+/*Configurações para a pagina index*/
+
+#primeirapagina{
+  float: left;
+  width: 700px;
+  min-height: 200px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
+#primeirapagina h1{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#primeirapagina h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#primeirapagina img{
+  margin-left: 150px;
+}
+
+
+/* Configuração geral do site */
+
+body{
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+	padding:0;
+	margin:0;
+}
+
+
+ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	font-size:0;
+	line-height:0;
+}
+
+.spacer{
+	clear:both;
+	font-size:0;
+	line-height:0;
+}
+
+/*Configuração para o cabecalho*/
+
+#cabecalhogeral{
+	width:100%;
+	background:url("/assets/top_bg.gif") 0 0 repeat-x;
+	height:232px;
+	padding: 0;
+}
+
+#logo{
+	width: 230px;
+	height: 150px;
+	margin-left: 40px;
+}
+
+#logo img{
+	width: 230px;
+	height: 150px;
+	float:left;
+}
+
+#logo2{
+	width: 230px;
+	height: 150px;
+	float: right;
+	margin-top: -150px;
+	margin-right: 40px;
+}
+
+#logo2 img{
+	width: 230px;
+	height: 150px;
+	float:right;
+}
+
+
+
+
+
+
+/*Configuração para o conteudo*/
+
+#conteudogeral{
+	width:100%;
+	min-height: 300px;
+	color:#000;
+	padding:15px 0 18px 0;
+}
+
+#conteudo{
+	width: 90%;
+	min-height: 300px;
+  margin:0 auto;
+}
+
+
+
+
+
+/*configurações para o menu*/
+
+#menu{
+	width: 90%;
+	margin-top: -56px;
+	margin-left: 5%;
+	height: 44px;
+}
+
+.menu li{
+	position:relative;
+	float:left;
+	margin-left: 5px;
+}
+
+.menu li a{
+	display:block;
+	background:url("/assets/nav_bg.gif") 0 0 no-repeat;
+	width:87px;
+	height:26px;
+	font:bold 11px  "Trebuchet MS",Arial, Helvetica, sans-serif;
+	color: white;
+	background-color: inherit;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+
+.menu li:hover ul ul{
+	display:none;
+}
+
+#menu a:hover{
+	color: black;
+}
+
+#menu li:hover ul{
+	display:block;
+}
+
+.submenu li a{
+  margin-left: -5px;
+	border-bottom: 1px solid #c0c0c0;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	display:block;
+	width:85px;
+	height: 20px;
+}
+
+
+.submenu li a{
+  background-image: none;
+}
+
+.submenu {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+
+#menu ul li a{
+  padding-top: 5px;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+
+#menu li ul{
+	position:absolute;
+	top: 26px;
+	left: 0px;
+	background-color: gray;
+	display:none;
+}
+
+
+
+/*Configurações para o rodape*/
+
+#rodapegeral{
+  clear: both;
+	width:100%;
+	margin:0  auto 0 auto;
+	float:left;
+	height:109px;
+	background:url("/assets/rodapemenu_bg.gif") 0 0 repeat-x;
+}
+
+#rodapemenu{
+	width:958px;
+	margin:0 auto;
+	position:relative;
+	height:109px;
+}
+
+#rodapemenu ul{
+	width:712px;
+	position:absolute;
+	left:90px;
+	top:18px;
+}
+
+#rodapemenu ul li{
+	float:left;
+	font:normal 11px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#fff;
+	background-color:inherit;
+}
+
+#rodapemenu ul li a{
+	padding:0 10px;
+	font:normal 11px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#fff;
+	background-color:inherit;
+	text-decoration:none;
+}
+
+#rodapemenu ul li a:hover{
+	text-decoration:underline;
+}
+
+#rodapemenu p.copyright{
+	font:normal 11px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	position:absolute;
+	left:261px;
+	top:37px;
+	width:450px;
+	color:#FEDC3B;
+	background-color:inherit;
+}
+
+#rodapemenu p.design{
+	display:block;
+	width:355px;
+	height:18px;
+	padding:0;
+	position:absolute;
+	left:261px;
+	top:58px;
+	font:bold 17px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#F5F5C7;
+	background-color:inherit;
+}
+
+#rodapemenu p.design a.link{
+	font:bold 17px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#F5F5C7;
+	background-color:inherit;
+	text-decoration:none;
+	padding:2px;
+}
+
+#rodapemenu p.design a.link:hover{
+	color:#fff;
+}
+
+
+
+
+
+
+
+/*Configurações para relatorio*/
+
+#relatorio{
+  float: left;
+  width: 800px;
+  margin-top: 35px;
+  margin-left: 60px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#relatorio td, th{
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+/*Configurações para o formulário*/
+
+#formulario{
+  float: left;
+  width: 600px;
+  min-height: 300px;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+}
+
+#formulario li {
+  float: left;
+  width: 540px;
+  list-style-type:none;
+}
+
+.dados_fieldset legend{
+  font-weight: bold;
+}
+
+.dados_fieldset label{
+  float: left;
+  margin-left: 30px;
+}
+
+
+.inline-errors{
+  float: right;
+  width: 30%;
+  margin-top: 2px;
+  color: #FF0000;
+}
+
+
+.formtastic abbr {
+  border:0;
+  font-variant:normal;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #FF0000;
+}
+
+.formtastic .input {
+  overflow:hidden; /* clear containing floats */
+  padding:0.5em 0; /* padding and negative margin juggling is for Firefox */
+  margin-top:-0.5em;
+  margin-bottom:1em;
+}
+
+.formtastic .input .label {
+  display:block;
+  width:20%;
+  float:left;
+  padding-top:.2em;
+}
+
+
+
+
+/*Configurações para as paginas de informações*/
+
+#informacoes{
+  float: left;
+  width: 750px;
+  min-height: 300px;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+
+#informacoes p{
+  text-indent: 35px;
+  font-size: 15px;
+  text-align: justify;
+}
+
+
+
+
+
+/*Configurações para a aba de usuariologado*/
+
+#usuariologado{
+  width: 100%;
+  height: 25px;
+  background-color: gray;
+}
+
+#usuariologado p{
+  float: left;
+  margin-left: 15px;
+  margin-top: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+#usuariologado a{
+  float: right;
+  margin-right: 15px;
+  margin-top: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+
+/*Configuracoes para a pagina de area restrita*/
+
+#arearestrita{
+  float: left;
+  width: 500px;
+  height: 500px;
+  margin-left: 200px;
+  background:url("/assets/acesso_restrito.gif");
+}
+
+#arearestrita .formularioarearestrita {
+  float: left;
+  width: 320px;
+  margin-left: 90px;
+  margin-top: 190px;
+}
+
+#arearestrita .formulariolinks{
+  float: left;
+  width: 320px;
+  margin-left: 90px;
+  margin-top: 20px;
+}

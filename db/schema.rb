@@ -11,13 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120604195243) do
-
-  create_table "especialidades", :force => true do |t|
-    t.text     "nome"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20120522231503) do
 
   create_table "funcionarios", :force => true do |t|
     t.string   "nome"
