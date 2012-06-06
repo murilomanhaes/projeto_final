@@ -60,7 +60,7 @@ class PostosController < ApplicationController
 
     respond_to do |format|
       if @posto.update_attributes(params[:posto])
-        format.html { redirect_to @posto, notice: 'Posto de Saude cadastrado com sucesso' }
+        format.html { redirect_to @posto, notice: 'Posto de Saude alterado com sucesso' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

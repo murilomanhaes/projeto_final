@@ -1,5 +1,7 @@
 ProjetoFinal::Application.routes.draw do
 
+  resources :especialidades
+
   devise_for :funcionarios, controllers: { registrations: 'funcionarios' }
 
   resources :funcionarios do

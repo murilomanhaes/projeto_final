@@ -60,7 +60,7 @@ class MedicosController < ApplicationController
 
     respond_to do |format|
       if @medico.update_attributes(params[:medico])
-        format.html { redirect_to @medico, notice: 'Medico cadastrado com sucesso.' }
+        format.html { redirect_to @medico, notice: 'Medico alterado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

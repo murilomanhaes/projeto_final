@@ -61,7 +61,7 @@ class FuncionariosController < ApplicationController
 
     respond_to do |format|
       if @funcionario.update_attributes(params[:funcionario])
-        format.html { redirect_to @funcionario, notice: 'Funcionario cadastrado com sucesso.' }
+        format.html { redirect_to @funcionario, notice: 'Funcionario alterado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
