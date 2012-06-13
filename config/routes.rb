@@ -8,6 +8,10 @@ ProjetoFinal::Application.routes.draw do
     get :informacoes, on: :collection
   end
 
+  resources :pacientes do
+    get :informacoes, on: :collection
+  end
+
   resources :postos do
     get :informacoes, on: :collection
   end

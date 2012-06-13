@@ -16,4 +16,8 @@ module ApplicationHelper
     { size: 9, maxlength: 9, onkeypress: 'return mascaraCEP(this, event);'}
   end
 
+  def opcoes_para_observacao
+    { cols: '45', rows: '5'}
+  end
+
 end

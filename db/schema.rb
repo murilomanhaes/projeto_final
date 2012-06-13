@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120605233546) do
+ActiveRecord::Schema.define(:version => 20120613203506) do
 
   create_table "especialidades", :force => true do |t|
     t.string   "nome"
@@ -73,21 +73,35 @@ ActiveRecord::Schema.define(:version => 20120605233546) do
     t.string   "bairro"
     t.string   "cep"
     t.string   "cidade"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "posto_id"
+    t.integer  "especialidade_id"
   end
 
-  create_table "posto_de_saudes", :force => true do |t|
+  create_table "pacientes", :force => true do |t|
     t.string   "nome"
+    t.string   "cpf"
+    t.string   "rg"
+    t.string   "cartao_sus"
+    t.string   "data_nascimento"
+    t.string   "sexo"
+    t.string   "estado_civil"
+    t.string   "cor"
+    t.string   "naturalidade"
+    t.string   "grau_instrucao"
+    t.string   "email"
+    t.string   "telefone"
     t.string   "endereco"
     t.string   "complemento"
     t.string   "bairro"
-    t.string   "cep"
     t.string   "cidade"
-    t.string   "telefone"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "estado"
+    t.string   "cep"
+    t.string   "profissao"
+    t.text     "observacao"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "postos", :force => true do |t|

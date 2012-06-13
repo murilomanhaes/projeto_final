@@ -10,6 +10,7 @@
            <%= f.input :nome %>
 
            <%= f.input :crm, label: "CRM"%>
+           <%= f.input :especialidade, member_label: :nome, include_blank: true%>
 
            <%= f.input :data_nascimento, as: :string, label: "Data Nascimento",
           input_html: opcoes_para_data %>
@@ -19,6 +20,7 @@
            <%= f.input :estado_civil, as: :select, collection: ["Solteiro", "Casado", "Separado", "Viúvo"] %>
 
            <%= f.input :naturalidade %>
+
 
            <%= f.input :grau_instrucao, label: "Grau Instrução"%>
       </fieldset>

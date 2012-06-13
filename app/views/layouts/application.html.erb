@@ -36,11 +36,11 @@
 
 		      <li><%= link_to 'Inicial', root_path %></li>
 
-		      <li><a href="#">Paciente</a>
+		      <li><%= link_to 'Paciente', informacoes_pacientes_path %>
 		          <ul class="submenu">
-					        <li><a href="#">Cadastrar</a></li>
-					        <li><a href="#">Consultar</a></li>
-					        <li><a href="#">Relatório</a></li>
+					        <li><%= link_to 'Cadastrar', new_paciente_path %></li>
+					         <li><a href="#">Consultar</a></li>
+					         <li><%= link_to 'Relatório', pacientes_path %></li>
 					    </ul>
 				  </li>
 
@@ -73,9 +73,6 @@
 		      <li><a href="#">Exames</a></li>
 		      <li><a href="#">Consulta Mé.</a></li>
 		      <li><a href="#">Suporte Online</a></li>
-		      <li><a href="#">Contato</a></li>
-
-
 
       </div>
 
@@ -83,7 +80,7 @@
         <div id="conteudo">
 
           <% if notice %>
--            <div id='notice'>
+                <div id='notice'>
                 <h1>Aviso</h1>
                 <p><%= notice %></p>
              </div>
@@ -111,9 +108,9 @@
 
 
 		<li><%= link_to 'Inicial', root_path %>|</li>
-		<li><a href="#">Paciente</a>|</li>
-		<li><a href="#">Médico</a>|</li>
-		<li><a href="#">Funcionário</a>|</li>
+		<li><%= link_to 'Paciente', informacoes_pacientes_path%>|</li>
+		<li><%= link_to 'Médico', informacoes_medicos_path%>|</li>
+		<li><%= link_to 'Funcionário', informacoes_funcionarios_path%>|</li>
 		<li><%= link_to 'U.M.S', informacoes_postos_path%>|</li>
 		<li><a href="#">Exames</a>|</li>
 		  <li><a href="#">Consulta Médica</a>|</li>
