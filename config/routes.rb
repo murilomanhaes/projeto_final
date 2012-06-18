@@ -13,7 +13,10 @@ ProjetoFinal::Application.routes.draw do
   end
 
   resources :postos do
-    get :informacoes, on: :collection
+    collection do
+      get :informacoes
+      get :buscar
+    end
   end
 
   resources :medicos do
