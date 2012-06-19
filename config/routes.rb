@@ -15,7 +15,6 @@ ProjetoFinal::Application.routes.draw do
   resources :postos do
     collection do
       get :informacoes
-      get :abrir_consulta
       get :consultar
     end
   end

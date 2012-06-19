@@ -84,9 +84,6 @@ class PostosController < ApplicationController
   def informacoes
   end
 
-  def abrir_consulta
-  end
-
   def consultar
     nome = params[:nome]
     @postos = Posto.where('UPPER(nome) LIKE ?', "%#{nome.upcase}%")
