@@ -34,11 +34,3 @@
 <br />
 
 </div>
-
-<div id='busca'>
-   <%= form_tag buscar_postos_path, method: :get do %>
-     <%= label_tag :nome, 'Busca por nome' %>
-     <%= text_field_tag :nome %>
-     <%= submit_tag 'Buscar' %>
-   <% end %>
-</div>

@@ -1,0 +1,25 @@
+<div id="especialidade">
+
+<h1>Especialidades Cadastrados</h1>
+
+
+<table id="relatorio">
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @especialidades.each do |especialidade| %>
+  <tr>
+    <td><%= especialidade.nome %></td>
+    <td><%= link_to 'Ver', especialidade %></td>
+    <td><%= link_to 'Alterar', edit_especialidade_path(especialidade) %></td>
+    <td><%= link_to 'Apagar', especialidade, confirm: 'Realmente deseja apagar?', method: :delete %></td>
+   </tr>
+<% end %>
+</table>
+</br>
+
+</div>

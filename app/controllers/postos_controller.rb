@@ -84,7 +84,10 @@ class PostosController < ApplicationController
   def informacoes
   end
 
-  def buscar
+  def abrir_consulta
+  end
+
+  def consultar
     nome = params[:nome]
     @postos = Posto.where('UPPER(nome) LIKE ?', "%#{nome.upcase}%")
     render 'index'

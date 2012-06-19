@@ -1,0 +1,45 @@
+<div id="formulario">
+
+  <%= semantic_form_for(@paciente) do |f| %>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Pessoais</legend>
+          <br>
+          <%= f.input :nome %>
+          <%= f.input :cpf, label: "CPF", input_html: opcoes_para_cpf %>
+          <%= f.input :rg, label: "RG" %>
+          <%= f.input :cartao_sus, label: "Cartão SUS" %>
+          <%= f.input :data_nascimento, as: :string, label: "Data Nascimento",
+          input_html: opcoes_para_data %>
+          <%= f.input :sexo, as: :select, collection: ["Masculino", "Feminino"]%>
+          <%= f.input :estado_civil, as: :select, collection: ["Solteiro", "Casado", "Separado", "Viúvo"] %>
+          <%= f.input :cor, as: :select, collection: ["Negro", "Mulato Escuro", "Mulato Médio", "Mulato Claro", "Branco"] %>
+          <%= f.input :naturalidade %>
+          <%= f.input :grau_instrucao, label: "Grau Instrução"%>
+      </fieldset>
+
+      <br><br>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Contato</legend>
+           <br>
+           <%= f.input :email, label: "E-mail"%>
+           <%= f.input :telefone, input_html: opcoes_para_telefone %>
+           <%= f.input :endereco, label: "Endereço"%>
+           <%= f.input :complemento %>
+           <%= f.input :bairro %>
+           <%= f.input :cidade %>
+           <%= f.input :estado, as: :select, collection: ["Acre", "Alagoas", "Amazonas", "Amapá", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rondônia", "Rio Grande do Sul", "Roraima", "Santa Catarina", "Sergipe", "São Paulo", "Tocantins"] %>
+           <%= f.input :cep, label: "CEP", input_html: opcoes_para_cep %>
+           <%= f.input :profissao, label: "Profissão" %>
+           <%= f.input :observacao, label: "Observação", input_html: opcoes_para_observacao %>
+
+      </fieldset>
+
+
+      <br><br>
+
+      <%= f.submit 'Salvar' %>
+<% end %>
+
+</div>

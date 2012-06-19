@@ -1,0 +1,17 @@
+<div id="formulario">
+
+<%= semantic_form_for(@especialidade) do |f| %>
+
+
+  <fieldset class="dados_fieldset">
+    <legend> Dados Especialidade</legend>
+    <br>
+        <%= f.input :nome %>
+  </fieldset>
+
+
+  <br><br>
+  <%= f.submit 'Salvar' %>
+<% end %>
+
+</div>
