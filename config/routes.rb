@@ -5,11 +5,17 @@ ProjetoFinal::Application.routes.draw do
   devise_for :funcionarios, controllers: { registrations: 'funcionarios' }
 
   resources :funcionarios do
-    get :informacoes, on: :collection
+    collection do
+      get :informacoes
+      get :consultar
+    end
   end
 
   resources :pacientes do
-    get :informacoes, on: :collection
+    collection do
+      get :informacoes
+      get :consultar
+    end
   end
 
   resources :postos do
@@ -20,7 +26,10 @@ ProjetoFinal::Application.routes.draw do
   end
 
   resources :medicos do
-    get :informacoes, on: :collection
+    collection do
+      get :informacoes
+      get :consultar
+    end
   end
 
 root to: "home#index"

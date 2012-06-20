@@ -82,6 +82,11 @@ class MedicosController < ApplicationController
   end
 
   def informacoes
+  end
 
+  def consultar
+    nome = params[:nome]
+    @medicos = Medico.where('UPPER(nome) LIKE ?', "%#{nome.upcase}%")
+    render 'index'
   end
 end

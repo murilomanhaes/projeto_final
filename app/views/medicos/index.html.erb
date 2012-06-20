@@ -1,6 +1,14 @@
 <div id="medico">
 
-<h1>Médicos Cadastrados</h1>
+<h1>Consultar Médico</h1>
+
+<div id='consulta'>
+   <%= form_tag consultar_medicos_path, method: :get do %>
+     <%= label_tag :nome, 'Busca por nome' %>
+     <%= text_field_tag :nome %>
+     <%= submit_tag 'Buscar' %>
+   <% end %>
+</div>
 
 <table id="relatorio">
   <tr>

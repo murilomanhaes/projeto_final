@@ -80,4 +80,13 @@ class PacientesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def informacoes
+  end
+
+  def consultar
+    nome = params[:nome]
+    @pacientes = Paciente.where('UPPER(nome) LIKE ?', "%#{nome.upcase}%")
+    render 'index'
+  end
 end

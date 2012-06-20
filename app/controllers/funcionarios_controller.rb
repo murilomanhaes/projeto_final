@@ -83,6 +83,11 @@ class FuncionariosController < ApplicationController
   end
 
   def informacoes
+  end
 
+  def consultar
+    nome = params[:nome]
+    @funcionarios = Funcionario.where('UPPER(nome) LIKE ?', "%#{nome.upcase}%")
+    render 'index'
   end
 end
