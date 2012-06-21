@@ -10,7 +10,7 @@
 <% if funcionario_signed_in? %>
   <div id="usuariologado">
 
-      <p>Bem Vindo <%= current_funcionario.nome %></p>
+      <p class="ola">Olá</p> <p class="usuarionome"><%= current_funcionario.nome %></p>
 
       <%= link_to 'Sair', destroy_funcionario_session_path, method: :delete  %>
   </div>
@@ -68,7 +68,6 @@
 
 		      <li><a href="#">Exames</a></li>
 		      <li><a href="#">Consulta Mé.</a></li>
-		      <li><a href="#">Suporte Online</a></li>
 
       </div>
 
