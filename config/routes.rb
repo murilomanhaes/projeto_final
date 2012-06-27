@@ -1,5 +1,13 @@
 ProjetoFinal::Application.routes.draw do
 
+ resources :marcacoes, except: [:edit, :update, :destroy] do
+		member do
+		  get :concluir
+		  put :salvar_conclusao
+	  end
+	  get :concluidas, on: :collection
+	end
+
   resources :especialidades
 
   devise_for :funcionarios, controllers: { registrations: 'funcionarios' }

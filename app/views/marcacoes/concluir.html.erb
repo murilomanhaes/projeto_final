@@ -1,0 +1,9 @@
+<h1>Concluir Marcação</h1>
+<br>
+<%= semantic_form_for @marcacao, url: salvar_conclusao_marcacao_path(@marcacao), method: :put do |f| %>
+
+   <%= f.input :conclusao, label: "Conclusão",  as: :select, collection: ["Compareceu", "Não Compareceu", "Desmarcou"]%>
+   <%= f.input :data_conclusao, as: :string, label: "Data",
+       input_html: { value: Date.today.to_s_br } %>
+   <%= f.submit 'Concluir Marcação'%>
+<% end %>

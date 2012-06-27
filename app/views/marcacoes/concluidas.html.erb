@@ -1,0 +1,33 @@
+<div id="medico">
+
+<h1>Consultas Concluídas</h1>
+
+<table id="relatorio">
+  <tr>
+    <th>Paciente</th>
+    <th>Médico</th>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Data Conclusão</th>
+    <th>Conclusão</th>
+  </tr>
+
+  <% for marcacao in @marcacoes %>
+
+    <% if marcacao.concluido? %>
+        <tr>
+          <td><p><%= marcacao.paciente.nome %></p></td>
+          <td><p><%= marcacao.medico.nome %></p></td>
+          <td><p><%= marcacao.data.to_s_br %></p></td>
+          <td><p><%= marcacao.hora %></p></td>
+          <td><p><%= marcacao.data_conclusao.to_s_br%></p></td>
+          <td><p><%= marcacao.conclusao %><p></td>
+
+        </tr>
+    <% else %>
+
+    <% end %>
+  <%end%>
+</table>
+
+</div>

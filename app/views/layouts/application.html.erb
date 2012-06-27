@@ -66,7 +66,13 @@
 					    </ul>
 				  </li>
 
-          <li><a href="#">Consulta Mé.</a></li>
+          <li><a href="#">Consulta Mé.</a>
+		          <ul class="submenu">
+					         <li><%= link_to 'Marcar', new_marcacao_path %></li>
+					         <li><%= link_to 'Concluir', marcacoes_path %></li>
+					         <li><%= link_to 'Concluidas', concluidas_marcacoes_path %></li>
+					    </ul>
+				  </li>
 		      <li><a href="#">Exames</a></li>
 
 
@@ -108,7 +114,7 @@
 		<li><%= link_to 'Médico', informacoes_medicos_path%>|</li>
 		<li><%= link_to 'Funcionário', informacoes_funcionarios_path%>|</li>
 		<li><%= link_to 'U.M.S', informacoes_postos_path%>|</li>
-		<li><a href="#">Consulta Médica</a>|</li>
+		<li><%= link_to 'Consulta Médica', new_marcacao_path%>|</li>
 		<li><a href="#">Exames</a></li>
 
     </ul>

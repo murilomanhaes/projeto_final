@@ -1,0 +1,33 @@
+<div id="medico">
+
+<p>
+  <b>Paciente:</b>
+  <%= @marcacao.paciente.nome %>
+</p>
+
+<p>
+  <b>Médico:</b>
+  <%= @marcacao.medico.nome %>
+</p>
+
+<p>
+  <b>Data Consulta:</b>
+  <%= @marcacao.data.to_s_br %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @marcacao.hora %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @marcacao.tipo %>
+</p>
+
+<p>
+  <b>Problema:</b>
+  <%= @marcacao.problema %>
+</p>
+
+</div>
