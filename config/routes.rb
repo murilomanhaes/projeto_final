@@ -5,7 +5,11 @@ ProjetoFinal::Application.routes.draw do
 		  get :concluir
 		  put :salvar_conclusao
 	  end
-	  get :concluidas, on: :collection
+
+	  collection do
+      get :concluidas
+      get :consultar_concluidas
+    end
 	end
 
   resources :especialidades

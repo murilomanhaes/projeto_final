@@ -1,4 +1,5 @@
 class PostosController < ApplicationController
+  before_filter :authenticate_funcionario!
   # GET /postos
   # GET /postos.json
   def index
