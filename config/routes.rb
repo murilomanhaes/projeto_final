@@ -9,7 +9,10 @@ ProjetoFinal::Application.routes.draw do
 	  collection do
       get :concluidas
       get :consultar_concluidas
+<<<<<<< HEAD
       get :consultar_marcadas
+=======
+>>>>>>> 169dbefda8a3454a4518ccc4b269b78e286d0abd
     end
 	end
 
