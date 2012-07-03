@@ -4,6 +4,8 @@ require "spec_helper" # chamar o arquivo spec_helper
 
 feature "gerenciar Pacientes" do
 
+before(:each) { login }
+
  	scenario "inclusao" do
 
  	   visit new_paciente_path

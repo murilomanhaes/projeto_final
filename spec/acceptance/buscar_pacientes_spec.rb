@@ -2,6 +2,8 @@ require 'spec_helper'
 
 feature 'buscar pacientes' do
 
+before(:each) { login }
+
   scenario 'por nome' do
     FactoryGirl.create(:paciente, nome: 'murilo')
     FactoryGirl.create(:paciente, nome: 'mauricio')

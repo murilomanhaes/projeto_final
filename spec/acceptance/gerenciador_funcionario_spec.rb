@@ -10,7 +10,7 @@ feature "gerenciar funcionario" do
 
  	   visit new_funcionario_path
         fill_in "Nome", with: "Murilo Alves Manhães"
-        fill_in "CPF", with: "123.456.789-09"
+        fill_in "CPF", with: "139.884.947-20"
         fill_in "RG", with: "1234567889765"
         select "Masculino", from: "Sexo"
         fill_in "Data Nascimento", with: "26/10/1990"
@@ -38,7 +38,7 @@ feature "gerenciar funcionario" do
 
         page.should have_content "Funcionario cadastrado com sucesso"
         page.should have_content "Nome: Murilo Alves Manhães"
-        page.should have_content "CPF: 123.456.789-09"
+        page.should have_content "CPF: 139.884.947-20"
         page.should have_content "RG: 1234567889765"
         page.should have_content "Sexo: Masculino"
         page.should have_content "Data Nascimento: 26/10/1990"

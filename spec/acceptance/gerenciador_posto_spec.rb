@@ -3,6 +3,9 @@
 require "spec_helper" # chamar o arquivo spec_helper
 
 feature "gerenciar posto" do
+
+before(:each) { login }
+
  	scenario "inclusao" do
  	   visit new_posto_path
 

@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 feature 'buscar postos' do
+
+before(:each) { login }
+
   scenario 'por nome' do
     FactoryGirl.create(:posto, nome: 'posto 1')
     FactoryGirl.create(:posto, nome: 'outro posto')

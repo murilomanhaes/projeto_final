@@ -3,6 +3,9 @@
 require "spec_helper" # chamar o arquivo spec_helper
 
 feature "gerenciar medico" do
+
+  before(:each) { login }
+
  	scenario "inclusao" do
 
  	      FactoryGirl.create :posto, nome: "Posto1"
