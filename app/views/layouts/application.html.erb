@@ -72,7 +72,13 @@
 					         <li><%= link_to 'Concluidas', concluidas_marcacoes_path %></li>
 					    </ul>
 				  </li>
-		      <li><a href="#">Exames</a></li>
+		      <li><a href="#">Exames</a>
+		          <ul class="submenu">
+					         <li><%= link_to 'Marcar', new_exame_path %></li>
+					          <li><%= link_to 'Concluir', exames_path %></li>
+					          <li><%= link_to 'Concluidos', concluidas_exames_path %></li>
+					    </ul>
+				  </li>
 
 
       </div>
@@ -114,8 +120,8 @@
 		<li><%= link_to 'Funcionário', informacoes_funcionarios_path%>|</li>
 		<li><%= link_to 'U.M.S', informacoes_postos_path%>|</li>
 		<li><%= link_to 'Consulta Médica', new_marcacao_path%>|</li>
-		<li><a href="#">Exames</a></li>
-
+		<li><%= link_to 'Exame', new_exame_path%>|</li>
+		
     </ul>
     <p class="copyright">© Sistema de SUS 2012. Todos os direitos reservados.</p>
     <p class="design">Desenvolvido por: <a href="#" target="_blank" class="link">TRI Sistemas</a></p>

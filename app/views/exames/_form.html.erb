@@ -1,0 +1,37 @@
+<div id="formulario">
+
+  <%= semantic_form_for(@exame) do |f| %>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Paciente</legend>
+          <br>
+          <%= f.input :paciente, member_label: :nome, include_blank: true%>
+      </fieldset>
+
+<br><br>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Médico</legend>
+          <br>
+          <%= f.input :medico, member_label: :nome, include_blank: true %>
+      </fieldset>
+
+<br><br>
+
+      <fieldset class="dados_fieldset">
+        <legend> Dados Exame</legend>
+          <br>
+          <%= f.input :data, as: :string, label: "Data Exame", input_html: opcoes_para_data %>
+
+          <%= f.input :hora %>
+
+          <%= f.input :tipo, as: :select, collection: ["Agendamento", "Emergencial"]%>
+
+      </fieldset>
+
+        <br><br>
+
+      <%= f.submit 'Salvar' %>
+<% end %>
+
+</div>

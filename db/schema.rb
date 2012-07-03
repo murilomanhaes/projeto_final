@@ -11,12 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120626031749) do
+ActiveRecord::Schema.define(:version => 20120703005343) do
 
   create_table "especialidades", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "exames", :force => true do |t|
+    t.string   "paciente_id"
+    t.integer  "medico_id"
+    t.date     "data"
+    t.string   "hora"
+    t.string   "tipo"
+    t.string   "conclusao"
+    t.date     "data_conclusao"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "funcionarios", :force => true do |t|

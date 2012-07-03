@@ -1,0 +1,42 @@
+<div id="medico">
+
+<h1>Baixar Exame</h1>
+
+<div id='consulta'>
+   <%= form_tag consultar_marcadas_exames_path, method: :get do %>
+     <%= label_tag :data, 'Busca por data' %>
+     <%= text_field_tag :data %>
+     <%= submit_tag 'Buscar' %>
+   <% end %>
+</div>
+
+<table id="relatorio">
+  <tr>
+    <th>Paciente</th>
+    <th>Médico</th>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Data Conclusão</th>
+    <th> </th>
+  </tr>
+
+  <% for exame in @exames %>
+
+  <% if exame.concluido? %>
+
+  <% else %>
+    <tr>
+      <td><p><%= exame.paciente.nome %></p></td>
+      <td><p><%= exame.medico.nome %></p></td>
+      <td><p><%= exame.data.to_s_br %></p></td>
+      <td><p><%= exame.hora %></p></td>
+      <td><p><%= exame.data_conclusao.to_s_br%></p></td>
+      <td>
+        <%= link_to 'Concluir', concluir_exame_path(exame) %>
+        <%end%>
+    </tr>
+
+  <% end %>
+</table>
+
+</div>

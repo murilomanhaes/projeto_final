@@ -47,7 +47,6 @@ class MarcacoesController < ApplicationController
 
   def consultar_concluidas
     data = params[:data].to_date
-<<<<<<< HEAD
     puts data
     @marcacoes = Marcacao.where('data = ?', data)
     render 'concluidas'
@@ -59,9 +58,4 @@ class MarcacoesController < ApplicationController
     @marcacoes = Marcacao.where('data = ?', data)
     render 'index'
   end
-=======
-    @marcacoes = Marcacao.where('data BETWEEN ? AND ?', data.at_beginning_of_day, data.tomorrow.at_beginning_of_day - 1.second)
-    render 'concluidas'
-  end
->>>>>>> 169dbefda8a3454a4518ccc4b269b78e286d0abd
 end
