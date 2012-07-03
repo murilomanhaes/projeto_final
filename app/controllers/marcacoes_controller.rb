@@ -1,5 +1,8 @@
 class MarcacoesController < ApplicationController
+    
+    load_and_authorize_resource 
       before_filter :authenticate_funcionario!
+      
 		def new
 			@marcacao = Marcacao.new
 		end

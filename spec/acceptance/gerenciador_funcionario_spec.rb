@@ -32,8 +32,8 @@ feature "gerenciar funcionario" do
         fill_in "Confirmação", with: "123"
 
         select "Posto1", from: "Posto"
-
-
+        select "Administrador", from: "Tipo"
+    
         click_button "Salvar"
 
         page.should have_content "Funcionario cadastrado com sucesso"
@@ -57,6 +57,6 @@ feature "gerenciar funcionario" do
         page.should have_content "CEP: 28026-090"
 
         page.should have_content "Posto: Posto1"
-
+        page.should have_content "Tipo: Atendente"
   end
 end

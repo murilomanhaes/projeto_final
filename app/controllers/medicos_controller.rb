@@ -1,5 +1,8 @@
 class MedicosController < ApplicationController
+  
+  load_and_authorize_resource 
   before_filter :authenticate_funcionario!
+  
   # GET /medicos
   # GET /medicos.json
   def index

@@ -1,5 +1,8 @@
 class FuncionariosController < ApplicationController
+
+  load_and_authorize_resource 
   before_filter :authenticate_funcionario!
+  
   # GET /funcionarios
   # GET /funcionarios.json
   def index
