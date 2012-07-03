@@ -1,4 +1,5 @@
 class MarcacoesController < ApplicationController
+      before_filter :authenticate_funcionario!
 		def new
 			@marcacao = Marcacao.new
 		end
@@ -44,4 +45,17 @@ class MarcacoesController < ApplicationController
     @marcacoes = Marcacao.all
   end
 
+  def consultar_concluidas
+    data = params[:data].to_date
+    puts data
+    @marcacoes = Marcacao.where('data = ?', data)
+    render 'concluidas'
+  end
+  
+  def consultar_marcadas
+    data = params[:data].to_date
+    puts data
+    @marcacoes = Marcacao.where('data = ?', data)
+    render 'index'
+  end
 end

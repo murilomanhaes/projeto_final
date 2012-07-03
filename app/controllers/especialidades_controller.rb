@@ -1,4 +1,5 @@
 class EspecialidadesController < ApplicationController
+  before_filter :authenticate_funcionario!
   # GET /especialidades
   # GET /especialidades.json
   def index

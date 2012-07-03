@@ -12,4 +12,6 @@ belongs_to :posto
   validates :email, format:/^.+\@.+\..+$/
 
   usar_como_cpf :cpf
+
+  validates :email, :cpf, uniqueness:true
 end

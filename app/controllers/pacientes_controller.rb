@@ -1,4 +1,5 @@
 class PacientesController < ApplicationController
+    before_filter :authenticate_funcionario!
   # GET /pacientes
   # GET /pacientes.json
   def index
