@@ -45,22 +45,30 @@
 
 		      <li><%= link_to 'Médico', informacoes_medicos_path %>
 		          <ul class="submenu">
-					         <li><%= link_to 'Cadastrar', new_medico_path %></li>
+		            <% if can? :new, @medico %>
+                   <li><%= link_to 'Cadastrar', new_medico_path %></li>
+                <% end %>
 					         <li><%= link_to 'Consultar', medicos_path %></li>
+					      <% if can? :new, @especialidade %>
 					         <li><%= link_to 'Especialidade', new_especialidade_path %></li>
+					      <% end %>
 					    </ul>
 				  </li>
 
 		      <li><%= link_to 'Funcionário', informacoes_funcionarios_path %>
 		          <ul class="submenu">
+					       <% if can? :new, @funcionario %>
 					         <li><%= link_to 'Cadastrar', new_funcionario_path %></li>
+					       <% end %>
 					         <li><%= link_to 'Consultar', funcionarios_path %></li>
 					    </ul>
 				  </li>
 
 		      <li><%= link_to 'U.M.S', informacoes_postos_path %>
 		          <ul class="submenu">
+					       <% if can? :new, @posto %>  
 					         <li><%= link_to 'Cadastrar', new_posto_path %></li>
+					       <% end %>
 					         <li><%= link_to 'Consultar', postos_path %></li>
 					    </ul>
 				  </li>
